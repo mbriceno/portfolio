@@ -26,7 +26,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        yarn 'build'
+        yarn 'build --openssl-legacy-provider'
       }
     }
 
