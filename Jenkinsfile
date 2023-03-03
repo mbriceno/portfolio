@@ -26,7 +26,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        yarn 'build --openssl-legacy-provider'
+        sh 'node --version'
       }
     }
 
