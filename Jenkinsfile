@@ -24,10 +24,16 @@ pipeline {
       }
     }
 
-    stage('Build') {
+    stage('Install') {
       steps {
         sh '''npm install -g yarn
 yarn install'''
+      }
+    }
+
+    stage('Build') {
+      steps {
+        sh 'yarn build'
       }
     }
 
