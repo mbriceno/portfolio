@@ -8,8 +8,19 @@ pipeline {
     }
 
     stage('Log') {
-      steps {
-        sh 'ls -all'
+      parallel {
+        stage('Log') {
+          steps {
+            sh 'ls -all'
+          }
+        }
+
+        stage('Install Libs') {
+          steps {
+            sh 'yarn install'
+          }
+        }
+
       }
     }
 
