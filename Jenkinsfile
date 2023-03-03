@@ -15,7 +15,7 @@ pipeline {
           }
         }
 
-        stage('') {
+        stage('Node Version') {
           steps {
             sh 'node -v'
           }
@@ -26,7 +26,7 @@ pipeline {
 
     stage('Build') {
       steps {
-        sh 'node --version'
+        yarn 'install'
       }
     }
 
