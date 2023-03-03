@@ -24,12 +24,6 @@ pipeline {
       }
     }
 
-    stage('Build') {
-      steps {
-        yarn 'install'
-      }
-    }
-
   }
   tools {
     nodejs '16.17.0'
