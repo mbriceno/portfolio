@@ -24,6 +24,13 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        sh '''npm install -g yarn
+yarn install'''
+      }
+    }
+
   }
   tools {
     nodejs '16.17.0'
