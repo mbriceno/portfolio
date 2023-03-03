@@ -24,5 +24,11 @@ pipeline {
       }
     }
 
+    stage('Build') {
+      steps {
+        yarn 'build'
+      }
+    }
+
   }
 }
